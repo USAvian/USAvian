@@ -1,5 +1,5 @@
 # USAvian
-A user interface for visualizing spatial distribution of bird conservation and management in the United States. 
+A relational database and companion user interface for visualizing the spatial distribution of bird conservation and management in the United States. 
 
 A collection of collections. A list of lists. A map of maps. A one-stop shop for entities directly or indirectly doing bird conservation and management.
 
