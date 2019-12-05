@@ -7,7 +7,7 @@ Out of frustration of trying to build mental maps of what groups, cooperatives, 
 
 ## Potential Story Map Features
 ### Species ranges
-Includ layers for species ranges such that the user can identify relevant conservation or management persons/groups who woudld be good contacts in a specific area? 
+Include layers for species ranges such that the user can identify relevant conservation or management persons/groups who woudld be good contacts in a specific area? 
 
 Potential layers for species range maps include: 
 1. [USGS GAP](https://www.usgs.gov/core-science-systems/science-analytics-and-synthesis/gap/science/species) (approximately 2,000 predicted distributions)
