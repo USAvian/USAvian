@@ -28,6 +28,12 @@ Potential layers for species range maps include:
 ### Agencies, collaboratives, etc. doing conservation
 Include publicly available contact information for the groups doing conservation at certain species x spatial scales. Ideally, this database of 'doers' would be dynamic, such that users could add and/or edit the underlying database via a form or through pull requests. 
 
+1. Local audubon societies
+1. Federal agencies (lands, conservation zones)
+1. State agencies
+1. NGOs
+
+
 ### Dynamic updating
 As mentioned in the previous section, the map might include a mechanism by which end users could contribute or update information. Ideally, these changes would be pushed to the application once reviewed by a moderator, rather than having to rely on the developer to re-build the application each time a change is implemented. 
 
