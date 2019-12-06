@@ -48,10 +48,23 @@ If you'd like to help or voice your strongly-worded opinion publicly, please vis
 - Jessica Burnett
 - Kevin Burgio
 
+## Repository Structure
+```
+├── README.md                  : Description of this repository
+├── LICENSE                    : Repository license
+├── CODE_OF_CONDUCT.md         : Code of conduct for the repository
+│
+│
+├── data                       : Data files used to build and/or produce layers associated with the interactive map
+│   ├── shapefiles
+│       ├──  birds             : Shapefiles containing species range maps, predictions from species distribution models,
+│                                  and occurrence data
+│       ├──  conservation_units: Shapefiles containing boundaries of conservation units (e.g. FWS regions, managed state │      │                                  lands, TNC lands
+│       ├──  geography         : Geographical and political (e.g. US States, CA regions) boundaries
+│       ├──  cooperative_units : Shapefiles containing boundaries of collectives, cooperatives, groups of conservation units │                                  (e.g. GOMAMN)
+│
+├── data                       : Data files used to build and/or produce layers associated with the interactive map
+│   ├── TBD
 
-### Potential collaborators
-- [Dr. Ryan](http://www.sadieryan.net/) teaches GIS courses and might be interested in using this project as a teaching module where students have deliverable objectives
-- Abby Benson (USGS) - runs GBIF
-- Sky Bristol - big picture big thinker 
-- 
+```
 
