@@ -7,7 +7,7 @@ A collection of collections. A list of lists. A map of maps. The one-stop shop f
 ## About
 Out of frustration of trying to build mental maps of what groups, cooperatives, federal agencies are "doing" bird conservation, I'd like to compile as comprehensive of a list as possible. We will design the database such that it is interoperable with the [USGS Biogeographic Information System](), and thus can be easily incorporated into the visualization scheme used under this system (e.g. [maps.usgs.gov](maps.usgs.gov) for  examples). Further, the visualization service might also include direct links to conservation initiatives or papertrails, management outcomes, or relevant research articles, or contact information for relevant personnel.
 
-## Potential Benefits
+## Expected Benefits
 __Connecting Science and Decision Makers__. Many researchers are producing science which is relevant, and in some cases can directly inform, avian conservation or management. However, unless the researcher is (a) funded by the relevant stakeholder(s) or (b) is hyperaware of the potential stakeholders, their science may not be consumed by stakeholders until they come across the published science. Even if the consumer finds this published research, they must then digest and translate the science published. This project has the potential to serve as a middle-person. That is, a researcher who is interested in efficiently disseminating their work might identify potential stakeholders based on taxonomic, spatial, or temporal attributes in the database. 
 
 __Networking__. Although most conservation groups are likely aware of those doing conservation or management work either in similar regions of the US, or are working with similar habitat or taxa, this tool may help users identify previously unknown entities who are perhaps working with similar taxa but in disparate areas, or in similar areas but with disparate taxa. 
@@ -18,6 +18,9 @@ __Teaching__. This tool can be used to help understand the roles which various o
 
 
 ## Desired Features
+For updated lists of potentia and acutal data sources, please visit Issues [2](https://github.com/TrashBirdEcology/USAvian/issues/2), [3](https://github.com/TrashBirdEcology/USAvian/issues/3),  and [7](https://github.com/TrashBirdEcology/USAvian/issues/7). 
+
+
 ### Species ranges
 Include layers for species ranges such that the user can identify relevant conservation or management persons/groups who woudld be good contacts in a specific area? 
 
