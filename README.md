@@ -12,9 +12,10 @@ __Connecting Science and Decision Makers__. Many researchers are producing scien
 
 __Networking__. Although most conservation groups are likely aware of those doing conservation or management work either in similar regions of the US, or are working with similar habitat or taxa, this tool may help users identify previously unknown entities who are perhaps working with similar taxa but in disparate areas, or in similar areas but with disparate taxa. 
 
-__Outreach__. Similar to the potential role this tool might play in teaching, the tool may also help increase awareness outside the scientific communities of the conseravtion efforts in their immediate area, or with respect to taxa of interest. 
+__Teaching__. This tool can be used to help understand the roles which various organizations and agencies play in bird conservation, and at what spatial and temporal scales. 
 
-__Teaching__. This tool can be used to help understand the roles which various organizations and agencies play in bird conservation, and at what spatial scales. 
+__Outreach__. Similar to its role in teaching, the tool may also help increase awareness outside the scientific communities of the conseravtion efforts in their immediate area, or with respect to taxa of interest. 
+
 
 
 ## Desired Features
