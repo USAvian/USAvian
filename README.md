@@ -53,6 +53,7 @@ If you'd like to help or voice your strongly-worded opinion publicly, please vis
 ## Project Team
 - Jessica Burnett
 - Kevin Burgio
+- Auriel Fournier
 
 ## Repository Structure
 ```
