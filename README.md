@@ -1,7 +1,5 @@
 # USAvian
-An interactive map for connecting and visualizing the bird conservation and management networks in the U.S. 
-
-A collection of collections. A list of lists. A map of maps. The one-stop shop for entities directly or indirectly doing bird conservation and management.
+An interactive map for connecting and visualizing the bird conservation and management networks in the U.S.  A collection of collections. A list of lists. A map of maps. The one-stop shop for entities directly or indirectly doing bird conservation and management.
 
 
 ## About
@@ -52,9 +50,9 @@ Should the tool include a user-defined list of published science which is releva
 If you'd like to help or voice your strongly-worded opinion publicly, please visit [Issue 1](https://github.com/TrashBirdEcology/USAvian/issues/1) or [email JLB](mailto:jessicaleighburnett@gmail.com). Contributors must follow the [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## Project Team
-- Jessica Burnett
-- Kevin Burgio
-- Auriel Fournier
+- Kevin Burgio ([krburgio](https://github.com/rburgio))
+- Jessica Burnett ([trashbirdecology](https://github.com/trashbirdecology))
+- Auriel Fournier ([aurielfournier](https://github.com/aurielfournier))
 
 ## Repository Structure
 ```
