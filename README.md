@@ -5,7 +5,9 @@ A collection of collections. A list of lists. A map of maps. The one-stop shop f
 
 
 ## About
-Out of frustration of trying to build mental maps of what groups, cooperatives, federal agencies are "doing" bird conservation, I'd like to compile as comprehensive of a list as possible. We will design the database such that it is interoperable with the [USGS Biogeographic Information System](), and thus can be easily incorporated into the visualization scheme used under this system (e.g. [maps.usgs.gov](maps.usgs.gov) for  examples). Further, the visualization service might also include direct links to conservation initiatives or papertrails, management outcomes, or relevant research articles, or contact information for relevant personnel.
+This project was born from unsuccessful attempts at trying to build mental maps of what groups, cooperatives, federal agencies are "doing" or proposing bird conservation. We will design a database to inform a visualization (map) of this network. 
+
+The database will be interoperable with the USGS Biogeographic Information System, which can then be easily incorporated into the visualization scheme used under this system (e.g. see visualizations at [maps.usgs.gov](maps.usgs.gov) for  examples). 
 
 ## Expected Benefits
 __Connecting Science and Decision Makers__. Many researchers are producing science which is relevant, and in some cases can directly inform, avian conservation or management. However, unless the researcher is (a) funded by the relevant stakeholder(s) or (b) is hyperaware of the potential stakeholders, their science may not be consumed by stakeholders until they come across the published science. Even if the consumer finds this published research, they must then digest and translate the science published. This project has the potential to serve as a middle-person. That is, a researcher who is interested in efficiently disseminating their work might identify potential stakeholders based on taxonomic, spatial, or temporal attributes in the database. 
@@ -15,7 +17,6 @@ __Networking__. Although most conservation groups are likely aware of those doin
 __Teaching__. This tool can be used to help understand the roles which various organizations and agencies play in bird conservation, and at what spatial and temporal scales. 
 
 __Outreach__. Similar to its role in teaching, the tool may also help increase awareness outside the scientific communities of the conseravtion efforts in their immediate area, or with respect to taxa of interest. 
-
 
 
 ## Desired Features
