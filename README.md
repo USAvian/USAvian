@@ -21,7 +21,7 @@ __Outreach__. Similar to its role in teaching, the tool may also help increase a
 
 
 ## Desired Features
-For updated lists of potentia and acutal data sources, please visit Issues [2](https://github.com/TrashBirdEcology/USAvian/issues/2), [3](https://github.com/TrashBirdEcology/USAvian/issues/3),  and [7](https://github.com/TrashBirdEcology/USAvian/issues/7). 
+For updated lists of potential and acutal data sources, please visit Issues [2](https://github.com/TrashBirdEcology/USAvian/issues/2), [3](https://github.com/TrashBirdEcology/USAvian/issues/3),  and [7](https://github.com/TrashBirdEcology/USAvian/issues/7). 
 
 
 ### Species ranges
