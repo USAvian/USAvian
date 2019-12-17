@@ -1,6 +1,5 @@
 # USAvian
-
-**NOTE: IN EARLY DEVELOPMENT STAGE!** [![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges)
+[![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges)
 
 An interactive map for connecting and visualizing the bird conservation and management networks in the U.S.  A collection of collections. A list of lists. A map of maps. The one-stop shop for entities directly or indirectly doing bird conservation and management.
 
