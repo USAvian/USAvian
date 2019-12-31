@@ -16,7 +16,7 @@ __Networking__. Although most conservation groups are likely aware of those doin
 
 __Teaching__. This tool can be used to help understand the roles which various organizations and agencies play in bird conservation, and at what spatial and temporal scales. 
 
-__Outreach__. Similar to its role in teaching, the tool may also help increase awareness outside the scientific communities of the conseravtion efforts in their immediate area, or with respect to taxa of interest. 
+__Outreach__. Similar to its role in teaching, the tool may also help increase awareness outside the scientific communities of the conseravtion efforts in their immediate area, or with respect to taxa of interest. We also envision this map to as a resource to which communication professionals can refer when researching conservation news per region or species.
 
 
 ## Desired Features
