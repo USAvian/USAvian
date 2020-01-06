@@ -1,0 +1,19 @@
+Package: USAvian
+Title: A Pilot Mapping Tool for Project USAvian
+Version: 0.0.0.9000
+Authors@R:
+    c(person("Jessica", "Burnett", role = c("aut", "cre"), email = "jburnett@usgs.gov", comment = c(ORCID = "YOUR-ORCID-ID")),
+      person("Auriel", "Fournier", role=c("aut"), email="aurielfournier@gmail.com"), 
+      person("Kevin", "Burgio", role=c("aut"),    email="kevinburgio@gmail.com")    
+    )
+Description: What the package does (one paragraph).
+License:  CC0
+Encoding: UTF-8
+LazyData: true
+Depends: R (>=3.6.1 )
+Imports:
+  ggplot2,
+  magrittr,
+  dplyr
+Suggests: 
+  
