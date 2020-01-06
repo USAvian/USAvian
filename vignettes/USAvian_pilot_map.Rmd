@@ -1,0 +1,93 @@
+---
+title: "USAvian Pilot Map"
+author: "JBurnett"
+date: "1/6/2020"
+output: 
+  github_document:
+    html_preview: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, eval = TRUE, warning=FALSE, message=FALSE)
+
+
+pkgs<- c( "ggplot2", "dplyr", "ggplot2", "magrittr", "here", "usmap")
+# pkgs<- c("maps", "mapdata", "ggplot2", "devtools", "dplyr", "ggmap", "stringr", "magrittr", "here", "usmap")
+# install packages
+new.packages <- pkgs[!(pkgs %in% installed.packages()[,"Package"])]
+if(length(new.packages)) install.packages(new.packages)
+# load
+suppressMessages(lapply(pkgs, library, character.only = TRUE))
+```
+
+## Retrieve Data
+```{r get_data, include=FALSE}
+dat_loc  <- here("data")
+dat_dirs <- list.files(dat_loc, full.names = TRUE)
+```
+
+
+## USA Base Map
+Create the base map for adding layers
+```{r include=FALSE, echo=FALSE}
+# in 2019 package usmap used US Census county boundaries
+## state boundaries
+usa_states <- plot_usmap(regions="states")+
+  labs(title="US States, US Census Bureau (YYYY)")
+
+## county boundaries
+usa_counties <- plot_usmap(regions="counties")+
+  labs(title="US Counties, US Census Bureau (YYYY)")
+
+# for specific regions, see https://www2.census.gov/geo/pdfs/maps-data/maps/reference/us_regdiv.pdf 
+## southeast
+# usa_se <- plot_usmap(include = c("FL", "GA", "MS", "SC", "NC", "AL", "AR", "LA", "TN")) +
+#   labs(title = "Southeastern US",
+#        subtitle = "States in the Southeastern US")
+
+## south atlantic
+usa_sa <- usmap::plot_usmap(include = .south_atlantic)
+usa_s <- usmap::plot_usmap(include = .south_region)
+```
+```{r data_struc_usamap, include=FALSE}
+str(usmap::us_map())
+```
+
+
+
+## View Conservation Groups
+```{r include=FALSE}
+```
+
+
+```{r setup, include=FALSE}
+```
+```{r setup, include=FALSE}
+```
+```{r setup, include=FALSE}
+```
+```{r setup, include=FALSE}
+```
+
+##
+
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
