@@ -3,7 +3,6 @@
 
 An interactive map for connecting and visualizing the bird conservation and management networks in the U.S.  A collection of collections. A list of lists. A map of maps. The one-stop shop for entities directly or indirectly doing bird conservation and management.
 
-
 ## About
 This project was born from unsuccessful attempts at trying to build mental maps of what groups, cooperatives, federal agencies are "doing" or influencing bird conservation in the U.S. We are designing a database which will inform a visualization (map) of this complex network. 
 
