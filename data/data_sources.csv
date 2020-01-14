@@ -1,13 +1,13 @@
 title,abbrev,description,file_type,data_url,license,data_usage,refresh_rate,primary_curator,"context(administrative_region=top-down decision making influencing on-ground decisions with authority; advisory_region=top-down advisory councils, not necessarily on-ground actions influenced by decisions; managed_lands=actively managed or conserved property; integrated_data=heterogeneous data sources, multiple sources)",spat_extent,spat_resolution,temporal_extent,temporal_resolution,in_padus,in_sfr(logical:in_usgs_sfr),notes,high_level_url
-National Conservation Easements Database,necd,,,,CC0,open,,,managed_lands,usa,,,,y,,,
-National Parks,nps,,,,CC0,open,,USNPS,managed_land,usa,,,,,,,
-USFWS regions,fws,,,,CC0,open,,USFWS,administrative_region,usa,,,,,,,
+National Conservation Easements Database,necd,,,,,open,,,managed_lands,usa,,,,y,,,
+National Parks,nps,,,,,open,,USNPS,managed_land,usa,,,,,,,
+USFWS regions,fws,,,,,open,,USFWS,administrative_region,usa,,,,,,,
 Flyway councils,flyways,,,,,,,USFWS,advisory_region,usa,,,,,,,
 Partners in Flight,pif,,,,,,,Partners in Flight,advisory_region,usa,,,,,,,
 Bird Conservation Regions,bcr_v10,Terrestrial BCR v10.0,.gdb,https://www.birdscanada.org/research/gislab/download/bcr_gdbv10.zip,,open,,North American Bird Conservation Initiative,,n_america,,,,,,,https://www.birdscanada.org/research/gislab/index.jsp?targetpg=bcr&targetpg=bcr
 Bird Conservation Regions,bcr_v9.3,Terrestrial BCR v9.3,.gdb,https://www.birdscanada.org/research/gislab/download/bcr_gdbv93.zip,,open,,North American Bird Conservation Initiative,,n_america,,,,,,,https://www.birdscanada.org/research/gislab/index.jsp?targetpg=bcr&targetpg=bcr
 Bird Conservation Regions,bcr_persistent,Terrestrial BCR shapefiles. Refresh rate unknown,.shp,https://www.birdscanada.org/research/gislab/download/bcr_terrestrial_shape.zip,,open,,North American Bird Conservation Initiative,,n_america,,,,,,,https://www.birdscanada.org/research/gislab/index.jsp?targetpg=bcr&targetpg=bcr
-Audubon Important Bird Areas,iba,,,https://nationalaudubon.app.box.com/s/0qbexuf89j8wbqx6eag05v2oxdpf5dxk,none,strict; see notes,,Audubon,advisory_region,global,,,,,,This data_url link is for use by JLB only. All other users should visit <https://docs.google.com/forms/d/e/1FAIpQLSfv2EU-KhqwAy65gP1QGpgQQ_RC9SJoq8iveenS7WKw7b4N7Q/viewform> to initiate an agreement with Audubon for use of IBA data.,https://catalog.data.gov/dataset/united-states-joint-ventures
+Audubon Important Bird Areas,iba,,,data/US_IBAs.zip,strict but not explicit,strict; see notes,,Audubon,advisory_region,global,,,,,,This data_url link is for use by JLB only. All other users should visit <https://docs.google.com/forms/d/e/1FAIpQLSfv2EU-KhqwAy65gP1QGpgQQ_RC9SJoq8iveenS7WKw7b4N7Q/viewform> to initiate an agreement with Audubon for use of IBA data. JLB personal link: https://nationalaudubon.app.box.com/s/0qbexuf89j8wbqx6eag05v2oxdpf5dxk. JLB suggested they add License to datapage 20200114.,https://catalog.data.gov/dataset/united-states-joint-ventures
 PAD-US,pad,,,,,,,USGS,integrated_data,usa,varies,,,y,,,https://www.audubon.org/important-bird-areas#
 State Wildlife Action Plans,swap,,,,,,,USGS,conservation_priorities,usa,state,,,,T,,https://www.usgs.gov/core-science-systems/science-analytics-and-synthesis/gap/science/pad-us-data-download?qt-science_center_objects=0#qt-science_center_objects
 State of the Birds,sotb,,,,,,,,informational,,,,,,,,https://www.sciencebase.gov/catalog/item/56d720ece4b015c306f442d5
