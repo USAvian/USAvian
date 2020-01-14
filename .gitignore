@@ -1,3 +1,6 @@
 
 .DS_Store
 .Rproj.user
+
+# ignore subdirectory (this subdir saves local files)
+data/data-raw/
