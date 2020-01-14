@@ -13,3 +13,10 @@
 #' }
 #' @source \url{https://github.com/TrashBirdEcology/USAvian/blob/master/data/data_sources.csv}
 "data_sources"
+
+# data_sources<-read.csv("https://github.com/TrashBirdEcology/USAvian/blob/master/data/data_sources.csv", stringsAsFactors = FALSE)
+## OR ##
+# data_sources<-read.csv(here("data/data_sources.csv"), stringsAsFactors = FALSE)
+
+# Save as RDA
+saveRDS(data_sources, file=here("data/data_sources.Rda"))
