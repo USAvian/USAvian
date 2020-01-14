@@ -4,11 +4,12 @@
 #' @param url (optional) URL(s) character, single or vector, for data source locations.
 #' @param fn (optional) Filename(s) corresponding to the name local filename of the downloaded data (do not include the extension).
 #' @param abbrevs (Preferred) Abbreviations of select datasets (see col "abbrev" `data("data_sources")`)). Specifying this parameter is the preferred, and easier, method for downloading relevant data sources.
-#' @example
+#' @examples
 #' \donotrun{
 #' # Download the persistent Bird Conservation Regions (BCR) compressed file.
 #' download_data(abbrev="bcr_persistent")
 #' }
+#' @return NA. Files downloaded to local directory (as defined by `dir` parameter.)
 
 download_data <- function(
   dir=NULL, # directory for storing downloaded data (defaults to data/data-raw)
@@ -35,8 +36,8 @@ suppressWarnings(dir.create(dir)) # creates directory if DNE
 
 # if abbrevs are defined, load data_sources df and filter based on desired abbrevs.
 if(!is.null(abbrevs)) {
-  sources <- data("data_sources");
-  sources <- sources %>%
+  if(!exists("data_sources"))  data("data_sources")
+  data_sources <- data_sources %>%
              filter(abbrev %in% abbrevs) %>%  #abbrev=colname in data_sources
             dplyr::select(abbrev, data_url, abbrev)
   url<-sources$data_url

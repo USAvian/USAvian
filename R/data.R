@@ -16,10 +16,10 @@
 #'   \item{refresh_rate_mos}{Frequency of data updating, unit=months)}
 #'   \item{primary_curator}{Institution hosting or curating the data. Otherwise the primary contact organization to learn more about the data.}
 #'   \item{context}{Categorical. Team-imposed categories to describe the type of data.(administrative_region=top-down decision making influencing on-ground decisions with authority; advisory_region=top-down advisory councils, not necessarily on-ground actions influenced by decisions; managed_lands=actively managed or conserved property; integrated_data=heterogeneous data sources, multiple sources).}
-#'   \item{spat_extent}{}
-#'   \item{spat_resolution}{}
-#'   \item{temporal_extent}{}
-#'   \item{temporal_resolution}{}
+#'   \item{spat_extent}{Spatial extent of the information.}
+#'   \item{spat_resolution}{Spatial resolution of the information}
+#'   \item{temporal_extent}{Temporal extent of the information}
+#'   \item{temporal_resolution}{Temporal resolution of the information}
 #'   \item{in_padus}{Logical. Is the data in PAD-US (USGS Protected Areas Database)?}
 #'   \item{in_sfr}{Logical. Is the data in SFR (USGS Spatial Features Registry)}
 #'   \item{notes}{Team notes and relevant information}
@@ -30,5 +30,4 @@
 # Update data_sources data frame on package build
   ## this assumes the local version of data_sources.csv is UTD. make sure you pull before updating .Rda
   data_sources<-read.csv("data/data_sources.csv", stringsAsFactors = FALSE)
-  save(object = data_sources, file="data/data_sources.Rda")
-  load("data/data_sources.Rda")
+  usethis::use_data(data_sources, overwrite=TRUE)
