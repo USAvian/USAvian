@@ -30,11 +30,13 @@ abbrevs <- c("bcr_v10", "iba")
 
 Next, download the data. This function will not overwrite existing files with the same names. 
 ```{r download_data, include=FALSE}
-download_data(abbrevs=abbrevs, dir= here("data/data-raw"))
-list.files(here("data/data-raw")) # check to see which .zip files are here...
+download_data(abbrevs=abbrevs, dir= here("data/data-raw")) # this will create a new directory if it does not already exist
+list.files(here("data/data-raw")) # check to see which files are now in this dir..
 ```
+Next, import selected data into memory.
+```{r import_data}
 
-
+```
 
 ## USA Base Map
 Create the base map for adding layers

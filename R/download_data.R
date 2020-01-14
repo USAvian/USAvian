@@ -1,6 +1,6 @@
 #' @description Function provides an option to specify the data you want to download using URLs and desired filenames, or you can download files from our [Data Source List](https://github.com/TrashBirdEcology/USAvian/blob/master/data/data_sources.csv) and use the abbreviations to quickly download all desired data to file.
 #' @title Download data from URL to local destination.
-#' @param dir (optional) Directory for downloading the data. Defaults to `data/data-raw`
+#' @param dir (optional) Directory for storing the downloaded data. Defaults to `data/data-raw`
 #' @param url (optional) URL(s) character, single or vector, for data source locations.
 #' @param fn (optional) Filename(s) corresponding to the name local filename of the downloaded data (do not include the extension).
 #' @param abbrevs (Preferred) Abbreviations of select datasets (see col "abbrev" `data("data_sources")`)). Specifying this parameter is the preferred, and easier, method for downloading relevant data sources.
