@@ -1,7 +1,6 @@
 ---
 title: "USAvian Pilot Map"
-author: "JBurnett"
-date: "1/6/2020"
+author: "Jessica Burnett"
 output: 
   github_document:
     html_preview: true
@@ -10,20 +9,27 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, eval = TRUE, warning=FALSE, message=FALSE)
 
-
-pkgs<- c( "ggplot2", "dplyr", "ggplot2", "magrittr", "here", "usmap")
-# pkgs<- c("maps", "mapdata", "ggplot2", "devtools", "dplyr", "ggmap", "stringr", "magrittr", "here", "usmap")
-# install packages
+# install and load packages
+pkgs<- c( "ggplot2", "dplyr", "ggplot2", "magrittr", "here", "usmap", "sbtools")
 new.packages <- pkgs[!(pkgs %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
-# load
 suppressMessages(lapply(pkgs, library, character.only = TRUE))
 ```
 
-## Retrieve Data
+## Data Sources
+We are curating a list of data sources, currently located [here](https://github.com/TrashBirdEcology/USAvian/blob/master/data/data_sources.csv). Import this file as an object to easily retrieve the URL for relevant information.  
+
+```{r data_source_table}
+sources <- read.csv(here("data_raw/data_sources.csv"), stringsAsFactors = FALSE)
+abbrevs <- c("bcr_v10", )
+```
+This data table comprises abbreviations for ease of downloading.
+
 ```{r get_data, include=FALSE}
-dat_loc  <- here("data")
-dat_dirs <- list.files(dat_loc, full.names = TRUE)
+dataIn  <- here("data/dataIn")
+
+
+
 ```
 
 
@@ -41,18 +47,19 @@ usa_counties <- plot_usmap(regions="counties")+
 
 # for specific regions, see https://www2.census.gov/geo/pdfs/maps-data/maps/reference/us_regdiv.pdf 
 ## southeast
-# usa_se <- plot_usmap(include = c("FL", "GA", "MS", "SC", "NC", "AL", "AR", "LA", "TN")) +
-#   labs(title = "Southeastern US",
-#        subtitle = "States in the Southeastern US")
+usa_se <- plot_usmap(include = c("FL", "GA", "MS", "SC", "NC", "AL", "AR", "LA", "TN")) +
+  labs(title = "Southeastern US",
+       subtitle = "States in the Southeastern US")
 
-## south atlantic
-usa_sa <- usmap::plot_usmap(include = .south_atlantic)
-usa_s <- usmap::plot_usmap(include = .south_region)
+## or use the usmap to grab predefined census regions
+# usa_sa <- usmap::plot_usmap(include = .south_atlantic)
+# usa_s <- usmap::plot_usmap(include = .south_region)
 ```
 ```{r data_struc_usamap, include=FALSE}
 str(usmap::us_map())
 ```
 
+## 
 
 
 ## View Conservation Groups
