@@ -33,5 +33,25 @@
   usethis::use_data(data_sources, overwrite=TRUE)
 
 
+# Spatial data type descriptions table ------------------------------------
+#' Spatial Data Descriptions
+#' A data frame containing user-defined descriptions of spatial file types, extensions, dependencies, etc.
+#'
+#' @format A data frame with YY variables
+#' \describe{
+#'   \item{geo_data_type}{Type of database or spatial data}
+#'   \item{name}{Name of source data type}
+#'   \item{description_high}{A high-level description of the data. Simple. Short.}
+#'   \item{description_low}{A low-level, finer description of the file extension type}
+#'   \item{ext_primary}{Primary associated extension. E.g, Shapefiles have many file extensions but are primarily associated with '.shp.' extensions.}
+#'   \item{required}{Is the ext_primary required (TRUE), FALSE if an optional filetype.}
+#'   \item{native_to}{Language or software to which the extension is native. Does not imply this extension can only be used in this software.}
+#'   \item{default_xy}{Default coordinate reference system}
+#'   \item{default_alt}{Default vertical reference system (altitude)}
+#' }
+#' @source \url{https://github.com/TrashBirdEcology/USAvian/blob/master/data/spatial_data_types.txt}
+"spatial_data_types"
+spatial_data_types<-read.table("data/spatial_data_types.txt", sep="\t", skip=1, header=TRUE)
+usethis::use_data(spatial_data_types, overwrite=TRUE)
 
 
