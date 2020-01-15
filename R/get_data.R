@@ -7,5 +7,13 @@
 
 get_data <- function(){
 
+  data("spatial_data_types")
+  unique(spatial_data_types$name)
+
+## define options for common spatial data types
+data.frame(
+  name=c("shapefile"), functions=c("","")
+
+)
 
 }

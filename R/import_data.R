@@ -4,13 +4,16 @@
 #' @param dir_retrieve Directory location for retrieving the original, raw data. Defaults to `data/data-raw`
 #' @param filenames Filenames of the data to import. Defaults to the values in `data_sources$abbrev`
 #' @param abbrevs Abbreviations for which to search for files in dir_retrieve. Also used to save files in dir_retrieve.
-#' @param save_rda Logical. TRUE=save the imported data as .rda for quick retrieval. Saves to location `dir_rda`.
+#' @param save_rda Logical. TDefault=TRUE. Saves the imported data as .rda for quick retrieval. Saves to location `dir_rda`.
+#' @param overwrite Logical. Default=FALSE. Will not overwrite already decompressed files with the same name.
 
 import_data <- function(
   dir_rda='data/data-raw/data-rda',
   dir_retrieve='data/data-raw',
   filenames= NULL,
-  abbrevs= NULL
+  abbrevs= NULL,
+  overwrite=FALSE,
+  save_rda=TRUE
 ){
 # create a subdir for storing local data based on param "dir"
 suppressWarnings(dir.create(dir_rda))
@@ -42,7 +45,9 @@ data_availablity <- data.frame(filename=files_matched) %>%
 zip_files <- data_availablity %>% filter(ftype=="zip")
 for(i in 1:nrow(zip_files)){
   #unzip file i
-  unzip(zipfile = zip_files$path_retrieve[i], exdir =  zip_files$path_save_new[i], junkpaths = TRUE)
+  unzip(zipfile = zip_files$path_retrieve[i], exdir =  zip_files$path_save_new[i],
+        junkpaths = TRUE,
+        overwrite = overwrite)
       }# Unzip some files...
 
 # Categorize the data to understand wtf we are dealing with...----
@@ -58,15 +63,44 @@ for(j in 1:nrow(data_availablity)){
     rm(tmp, fns, exts, dir_path) #clear junk
                                   } # end j-loop categorizing data
 
- # Predict filetypes based on what files (col:`exts`) are present in each subdirectory
-temp <- data_types %>%
-  group_by(dir_path) %>%  # group by subdirectories
-  distinct(exts) # assign a predicted data_type
 
-temp
+
+# Predict filetypes based on what files (col:`exts`) are present in each subdirectory
+data("spatial_data_types")
+# Loop over each subdirectory to classify the filetypes
+for(i in seq_along(unique(data_types$dir_path))){
+  if(i==1) guesses<-NULL
+  # get unique files which exist in the directory
+  tmp <-
+    data_types %>%
+      filter(dir_path == unique(data_types$dir_path)[i]) %>%
+      distinct(exts)
+  # see where overlap is among filetypes, keep only required files
+  suppressWarnings(t <- inner_join(tmp, spatial_data_types, by='exts') %>%
+    filter(required=="TRUE") %>%
+    dplyr::select(geo_data_type, name))
+
+  if(nrow(t)==0){ warning("None of the file extensions in dir ", unique(data_types$dir_path),
+                         " match my knowledge (). You will need to do one of the following:",
+"\n  - Ignore me (-50XP)\n  - Update the entry in spatial_data_types (not recommended; +100XP)\n  - Report an Issue (github.com/trashbirdecology/usavian/issues) re: this data(+100XP)\n  - Manually import this data (+50XP)`"
+  )
+    next()}
+ # make an educated guess based on which has the most votes
+  max_name<-t[max(plyr::count(t$name)$freq),]
+  guess <- data.frame(max_name,
+                      path_save_new=unique(data_types$dir_path)[i])
+
+  suppressWarnings(guesses<-bind_rows(guess, guesses))
+  rm(guess)
+  } #end loop
+
+# Get method importation definitions from other function ----
+
+# Save the imported data as rdas ----
+if(save_rda) #bljbljljslbj save all files to rda
 
 # Return a df containing all the data which is available, raw-data paths/filenames and new paths ----
-  data_availablity <- merge(data_types, data_availablity)
+  data_availablity <- merge(data_types, data_availablity, )
   return(data_availablity)
 
  }

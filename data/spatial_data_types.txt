@@ -1,5 +1,5 @@
 This information was gleaned from https://gisgeography.com/gis-formats/ 20200114								
-geo_data_type	name	description_high	ext_primary	required	native_to	description_low	default_xy	default_alt
+geo_data_type	name	description_high	exts	required	native_to	description_low	default_xy	default_alt
 vector	shapefile	ESRI shapefile	shp	TRUE	esri	geospatal data format for esri;		
 vector	shapefile	ESRI shapefile	dbf	TRUE	esri	database file associated with shapefiles		
 vector	shapefile	ESRI shapefile	shx	TRUE	esri	header file		

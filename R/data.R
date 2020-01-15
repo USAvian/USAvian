@@ -43,7 +43,7 @@
 #'   \item{name}{Name of source data type}
 #'   \item{description_high}{A high-level description of the data. Simple. Short.}
 #'   \item{description_low}{A low-level, finer description of the file extension type}
-#'   \item{ext_primary}{Primary associated extension. E.g, Shapefiles have many file extensions but are primarily associated with '.shp.' extensions.}
+#'   \item{exts}{Associated file extensions for each "name". E.g, Shapefiles have many file extensions but are primarily associated with '.shp.' extensions.}
 #'   \item{required}{Is the ext_primary required (TRUE), FALSE if an optional filetype.}
 #'   \item{native_to}{Language or software to which the extension is native. Does not imply this extension can only be used in this software.}
 #'   \item{default_xy}{Default coordinate reference system}

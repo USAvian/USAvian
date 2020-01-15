@@ -22,10 +22,10 @@ We are curating a list of data sources, currently located [here](https://github.
 
 ```{r data_source}
 #define the abbreviations corresponding to the data of interest
-abbrevs <- c("bcr_v10", "iba")
+abbrevs <- c("bcr_persistent", "iba")
 # Available abbreviations can be found using:
-# data("data_sources")
-# unique(data_sources$abbrev)
+data("data_sources")
+unique(data_sources$abbrev)
 ```
 
 Next, download the data. This function will not overwrite existing files with the same names. 
