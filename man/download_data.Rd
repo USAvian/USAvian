@@ -7,7 +7,7 @@
 download_data(dir = NULL, url = NULL, fn = NULL, abbrevs = NULL)
 }
 \arguments{
-\item{dir}{(optional) Directory for downloading the data. Defaults to `data/data-raw`}
+\item{dir}{(optional) Directory for storing the downloaded data. Defaults to `data/data-raw`}
 
 \item{url}{(optional) URL(s) character, single or vector, for data source locations.}
 
