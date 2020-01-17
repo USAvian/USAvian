@@ -60,20 +60,18 @@ If you'd like to help or voice your strongly-worded opinion publicly, please vis
 ├── README.md                  : Description of this repository
 ├── LICENSE                    : Repository license
 ├── CODE_OF_CONDUCT.md         : Code of conduct for the repository
-│
-│
-├── data                       : Data files used to build and/or produce layers associated with the interactive map
-│   ├── shapefiles
-│       ├──  birds             : Shapefiles containing species range maps, predictions from species distribution models,
-│                                  and occurrence data
-│       ├──  conservation_units: Shapefiles containing boundaries of conservation units (e.g. FWS regions, managed state │      │                                  lands, TNC lands
-│       ├──  geography         : Geographical and political (e.g. US States, CA regions) boundaries
-│       ├──  cooperative_units : Shapefiles containing boundaries of collectives, cooperatives, groups of conservation units │                                  (e.g. GOMAMN)
-│
-├── data                       : Data files used to build and/or produce layers associated with the interactive map
-│   ├── TBD
-
+├── man                        : Package documentation (.rd files)
+├── paper                      : Manuscript associated with the software
+├── vignettes                  : Vignettes providing overviews of the package functionality
+├── R                          : Source code for package functions and data descriptions
+├── data                       : Package data (.rda) and information relevant to munging various data sources
+│   ├── US_IBAs.zip            : Audubon's Important Bird Areas (usage restrictions; contact Audubon to request use)
+│   ├── data_sources.csv       : Source data for creating the package data "data_sources". Created by JLB. 
+│   ├── data_sources.rda       : R data comprising the links and various user-defined information on data sources used to build the package
+│   ├── spatial_data_types.txt : Source data for creating package data "spatial_data_types". Created by JLB. 
+│   ├── spatial_data_types.rda : R data comprising self-categorized information about various spatial data filetypes. Used in package for "guessing" how to import the spatial data into R environment
 ```
+<!--- │       ├──               : --->
 
 
 ## USGS Provisional Software
