@@ -55,3 +55,20 @@ spatial_data_types<-read.table("data/spatial_data_types.txt", sep="\t", skip=1, 
 usethis::use_data(spatial_data_types, overwrite=TRUE)
 
 
+# Functions for importing various data types ------------------------------
+#' Functions for Importing Various Spatial Data Types
+#' A data frame containing packages and functions for importing spatial data of various types
+#'
+#' @format A data frame with YY variables
+#' \describe{
+#'   \item{name}{Name of source data type (as defined in `data("data_import_funs", package="USAvian")`.)}
+#'   \item{package}{Package associated with each function}
+#'   \item{package_fun}{Function(s) for importing the data (`name`) associated with each `Package`.}
+#'   \item{fun_desc}{What function `package::package_fun` serves (e.g., import file, convert raster).`}
+#'   \item{preferred}{Logical. TRUE indicates the package maintainers' preference for importing a specific file type(s).}
+#'   \item{source}{Package download source. If pacakge is on CRAN, sources="CRAN". If on github, listed as "github/ghusername/repo/". If neither, tar ball location is noted.}
+#' }
+#' @source \url{https://github.com/TrashBirdEcology/USAvian/blob/master/data/data_import_funs.txt}
+"spatial_data_funs"
+spatial_data_funs<-read.table("data/spatial_data_funs.txt", sep="\t", skip=0, header=TRUE)
+usethis::use_data(spatial_data_funs, overwrite=TRUE)

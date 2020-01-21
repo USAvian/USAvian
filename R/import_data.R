@@ -11,7 +11,7 @@ import_data <- function(
   dir_rda='data/data-raw/data-rda',
   dir_retrieve='data/data-raw',
   filenames= NULL,
-  abbrevs= NULL,
+  abbrevs=NULL,
   overwrite=FALSE,
   save_rda=TRUE
 ){
@@ -27,10 +27,14 @@ files <-  list.files(dir_retrieve)
 if(!length(files>0)) stop("No files exist in `dir_retrieve` (", dir_retrieve, "). \n Abandoning process `import_data()`")
 
 # Create df containing desired filenames or abbreviations
+if(is.null(abbrevs)){ # if the abbreviations are undefined then just list all that we know of...
+  data("data_sources")
+  abbrevs<-unique(data_sources$abbrev)
+  }
 for(i in seq_along(abbrevs)){
 if(i==1) files_matched <- NULL
   # ID filenames with matching indices (e.g. abbrevs)
-  files_matched <- c(files_matched, grep(abbrevs[i], files, value=TRUE))
+  files_matched <- c(files_matched, grep(abbrevs[i], files, value=TRUE)) %>% unique()
   }
 
 # Create a df comprising files_matched
@@ -88,16 +92,60 @@ for(i in seq_along(unique(data_types$dir_path))){
  # make an educated guess based on which has the most votes
   max_name<-t[max(plyr::count(t$name)$freq),]
   guess <- data.frame(max_name,
-                      path_save_new=unique(data_types$dir_path)[i])
+                      path_save_new=unique(data_types$dir_path)[i]
+                      )
 
   suppressWarnings(guesses<-bind_rows(guess, guesses))
   rm(guess)
   } #end loop
 
-# Get method importation definitions from other function ----
+# Get method importation definitions from function `USAvian::get_data()` ----
+how_to_get_data <- get_data(guesses)
 
-# Save the imported data as rdas ----
-if(save_rda) #bljbljljslbj save all files to rda
+
+# Import each data and save as RDS locally --------------------------------------------------------
+import_funs <- how_to_get_data %>% distinct(path_save_new, name, geo_data_type, package, package_fun, fun_desc) %>%
+  filter(fun_desc=="import") %>%
+  mutate(name = tolower(name))
+
+### for Shapefiles
+shps <- import_funs %>% filter(name=="shapefile")
+for(i in 1:nrow(shps)){
+  if(i==1) shps_temp<-NULL
+ temp_shps <- c(shps_temp, list.files(shps$path_save_new[i], "\\.shp$", full.names=TRUE))
+
+ }
+
+ do.call(what=sf::st_read, args=shps_temp)
+
+
+
+for(i in 1:nrow(import_funs)){
+  tmp <- import_funs[i,]
+ # get basic information for the do.call (same for every filetype)
+ path <- tmp$path_save_new
+ type <- tmp$name
+ pkg <- tmp$package
+ fun  <- tmp$package_fun
+ fun_full <- paste0(pkg, "::", fun)
+ # define the other crap for do.call() (changes based on filetype)
+
+  oc <- # other crap for function
+
+list <-
+
+}
+
+fun <- paste0(import_funs$package[i], "::",import_funs$package_fun[i], "(", other_crap,")"
+              )
+ # import each data based on filetype
+ do.call(what = fun, args)
+
+}
+
+
+# # Save the imported data as rdas ----
+# if(save_rda) #bljbljljslbj save all files to rda
 
 # Return a df containing all the data which is available, raw-data paths/filenames and new paths ----
   data_availablity <- merge(data_types, data_availablity, )

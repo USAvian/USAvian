@@ -1,0 +1,5 @@
+name	package	package_fun	fun_desc	package_source	preferred	plotter	preffered_plotter	extension
+shapefile	sf	st_read	import	CRAN	TRUE	gg	TBD	.shp
+shapefile	sf	st_geometry_type	get_geometry	CRAN	TRUE	gg	TBD	
+shapefile	sf	st_crs	get_crs	CRAN	TRUE	gg	TBD	
+shapefile	sf	st_bbox	get_bbox	CRAN	TRUE	gg	TBD	
