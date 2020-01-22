@@ -21,11 +21,12 @@ rm(new.packages,pkgs)
 We are curating a list of data sources, currently located [here](https://github.com/TrashBirdEcology/USAvian/blob/master/data/data_sources.csv). Import this file as an object to easily retrieve the URL for relevant information.  
 
 ```{r data_source}
-#define the abbreviations corresponding to the data of interest
-abbrevs <- c("bcr_persistent", "iba")
 # Available abbreviations can be found using:
 data("data_sources")
-unique(data_sources$abbrev)
+#define the abbreviations corresponding to the data of interest
+# abbrevs<-"mbjv"
+abbrevs <- c("bcr_persistent", "iba", "flyways", "mbjv")
+if(any(abbrevs %in% unique(data_sources$abbrev))==FALSE) "some abbrevs do not appear in data_sources$abbrev. please check."
 ```
 
 Next, download the data. This function will not overwrite existing files with the same names. 

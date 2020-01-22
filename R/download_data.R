@@ -55,9 +55,13 @@ data_sources$abbrev<-as.character(data_sources$abbrev)
 for(i in 1:nrow(data_sources)){
   # browser()
   ftype <- tools::file_ext(sub("\\?.+", "", data_sources$data_url[i])) # get filetype from url
+  ## some urls do not contain links with extensions, so for now assume they are .zip..
+  if(ftype=="") ftype <- "zip"
   ## Warning:I refuse to overwrite existing data.
     if(paste0(data_sources$abbrev[i], ".",ftype) %in% list.files(dir)){
-              message(paste0("File ",paste0(data_sources$abbrev[i], ".", ftype)," exists. I refuse to overwrite this data!\nDo you want to overwrite it? Well, get up and go delete this file locally and next time I will! -3.4XP"))
+              # message(paste0("File ",paste0(data_sources$abbrev[i], ".", ftype),
+              #                " exists. I refuse to overwrite this data!\nDo you want to overwrite it?
+              #                Well, get up and go delete this file locally and next time I will! -3.4XP"))
       next()
       }
   ## if DNE then downloads the file

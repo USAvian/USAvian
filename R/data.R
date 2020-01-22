@@ -32,7 +32,6 @@
   data_sources<-read.csv("data/data_sources.csv", stringsAsFactors = FALSE)
   usethis::use_data(data_sources, overwrite=TRUE)
 
-
 # Spatial data type descriptions table ------------------------------------
 #' Spatial Data Descriptions
 #' A data frame containing user-defined descriptions of spatial file types, extensions, dependencies, etc.
@@ -51,7 +50,9 @@
 #' }
 #' @source \url{https://github.com/TrashBirdEcology/USAvian/blob/master/data/spatial_data_types.txt}
 "spatial_data_types"
-spatial_data_types<-read.table("data/spatial_data_types.txt", sep="\t", skip=1, header=TRUE)
+spatial_data_types<-read.table("data/spatial_data_types.txt", sep="\t", skip=1, header=TRUE) %>%
+  mutate_if(is.factor, as.character)
+
 usethis::use_data(spatial_data_types, overwrite=TRUE)
 
 
@@ -70,5 +71,7 @@ usethis::use_data(spatial_data_types, overwrite=TRUE)
 #' }
 #' @source \url{https://github.com/TrashBirdEcology/USAvian/blob/master/data/data_import_funs.txt}
 "spatial_data_funs"
-spatial_data_funs<-read.table("data/spatial_data_funs.txt", sep="\t", skip=0, header=TRUE)
+spatial_data_funs<-read.table("data/spatial_data_funs.txt", sep="\t", skip=0, header=TRUE)  mutate_if(is.factor, as.character) %>%
+  mutate_if(is.factor, as.character)
+
 usethis::use_data(spatial_data_funs, overwrite=TRUE)
