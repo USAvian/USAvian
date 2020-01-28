@@ -5,10 +5,7 @@ An interactive map for connecting and visualizing the bird conservation and mana
 
 ## About
 This project was born from unsuccessful attempts at trying to build mental maps of what groups, cooperatives, federal agencies are "doing" or influencing bird conservation in the U.S. We are designing a database which will inform a visualization (map) of this complex network. 
-
-<img style="float: right;" src="/images/usability_concept.png">
 <img style="float: left;" src="/images/cdi_concept_img.png">
-
 The database will be interoperable with the USGS Biogeographic Information System, which can then be easily incorporated into the visualization scheme used under this system (e.g. see visualizations at [maps.usgs.gov](maps.usgs.gov) for  examples). The database will be spatially, temporally, and taxonomically subsettable such that end users can identify network connections and components relevant to their needs. 
 
 ## Expected Benefits
@@ -20,6 +17,8 @@ __Teaching__. This tool can be used to help understand the roles which various o
 
 __Outreach__. Similar to its role in teaching, the tool may also help increase awareness outside the scientific communities of the conseravtion efforts in their immediate area, or with respect to taxa of interest. We also envision this map to as a resource to which communication professionals can refer when researching conservation news per region or species.
 
+## Iterative Design and Development 
+<img style="float: left;" src="/images/usability_concept.png">
 
 ## Desired Features
 For updated lists of potential and acutal data sources, please visit Issues [2](https://github.com/TrashBirdEcology/USAvian/issues/2), [3](https://github.com/TrashBirdEcology/USAvian/issues/3),  and [7](https://github.com/TrashBirdEcology/USAvian/issues/7). 
