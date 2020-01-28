@@ -6,6 +6,7 @@ An interactive map for connecting and visualizing the bird conservation and mana
 ## About
 This project was born from unsuccessful attempts at trying to build mental maps of what groups, cooperatives, federal agencies are "doing" or influencing bird conservation in the U.S. We are designing a database which will inform a visualization (map) of this complex network. 
 <img style="float: left;" src="/images/cdi_concept_img.png">
+
 The database will be interoperable with the USGS Biogeographic Information System, which can then be easily incorporated into the visualization scheme used under this system (e.g. see visualizations at [maps.usgs.gov](maps.usgs.gov) for  examples). The database will be spatially, temporally, and taxonomically subsettable such that end users can identify network connections and components relevant to their needs. 
 
 ## Expected Benefits
