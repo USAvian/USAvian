@@ -1,8 +1,8 @@
-#' @title
+#' @title Categorize the decompressed files to identify vector vs. raster, and extensions.
 #' @description
 #' @param files A data frame with columns c("filename","abbrev","ftype","path_retrieve","path_save_new"). This will be the data frame output from `unzip_files`.
 categorize_data <- function(
-  files=unzip_files){
+  files=zip_files){
 # Categorize each unzipped directory (in data_avaialbility) to understand the files we are dealing with...----
 for (i in 1:nrow(zip_files)) {
   if (i == 1){ data_types <- data.frame()} # create empty df at first loop
@@ -41,8 +41,8 @@ for (i in seq_along(unique(data_types$dir_path))) {
   if (nrow(t) == 0) {
     warning(
       "None of the file extensions in dir ",
-      unique(data_types$dir_path),
-      " match my knowledge (). You will need to do one of the following:",
+      unique(tmp$dir_path),
+      " match my knowledge. You will need to do one of the following:",
       "\n  - Ignore me (-50XP)\n  - Update the entry in spatial_data_types (not recommended; +100XP)\n  - Report an Issue (github.com/trashbirdecology/usavian/issues) re: this data(+100XP)\n  - Manually import this data (+50XP)`"
     )
     rm(tmp, t)

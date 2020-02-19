@@ -1,4 +1,4 @@
-#' @description An internal function for getting various filetypes into memory. Called from inside `import_data`
+#' @description An internal function for getting various filetypes into memory.
 #' @title Retrieve multiple filetypes from disk.
 #' @param guesses A data frame with variables `abbrev` abbreviation for the dataset, `geo_data_type` higher level type of spatial data(e.g., vector, raster, metadata), `name` name of the type of spatial data (e.g., shapefile, geojson), and `path_save_new` relative path of the subdirectory (folder) of the file
 #' @param

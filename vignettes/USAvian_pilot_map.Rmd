@@ -1,16 +1,17 @@
 ---
 title: "USAvian Pilot Map"
 author: "Jessica Burnett"
-output: 
+output:
   github_document:
     html_preview: true
+# output: html_notebook
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, eval = TRUE, warning=FALSE, message=FALSE)
 
 # install and load packages
-pkgs<- c( "ggplot2", "dplyr", "ggplot2", "magrittr", "here", "usmap", "sbtools", "devtools")
+pkgs<- c( "ggplot2", "dplyr", "ggplot2", "magrittr", "here", "usmap", "sbtools", "devtools", "USAvian")
 new.packages <- pkgs[!(pkgs %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
 suppressMessages(lapply(pkgs, library, character.only = TRUE))
@@ -34,12 +35,10 @@ if(any(abbrevs %in% unique(data_sources$abbrev))==FALSE){ "some abbrevs do not a
 Next we can download the data. This function will **not** overwrite existing files with the same names. 
 ```{r download_data, include=FALSE}
 download_data(abbrevs=abbrevs, dir= here("data/data-raw")) # this will create a new directory if it does not already exist
-zip_files <- unzip_data(abbrevs) # unzip data and save an object containing the directories
+# zip_files <- unzip_data(abbrevs)
 ```
-<!-- The following files are available on disk and ready to use: -->
-<!-- ```{r list_avail_files, include=FALSE} -->
-<!-- list.files(here("data/data-raw")) # check to see which files are now in this dir... -->
-<!-- ``` -->
+Unzip the files associated with 'abbrevs'. For some reason this isn't working inside an RMD chunk, but works as expected here.....
+`r zip_files <- unzip_data(abbrevs)`
 
 ### Categorize the available files
 ```{r categorize_data}
