@@ -71,7 +71,9 @@ usethis::use_data(spatial_data_types, overwrite=TRUE)
 #' }
 #' @source \url{https://github.com/TrashBirdEcology/USAvian/blob/master/data/data_import_funs.txt}
 "spatial_data_funs"
-spatial_data_funs<-read.table("data/spatial_data_funs.txt", sep="\t", skip=0, header=TRUE)  mutate_if(is.factor, as.character) %>%
+
+suppressWarnings(spatial_data_funs<-read.table("data/spatial_data_funs.txt", sep="\t", skip=0, header=TRUE)) # keep separated, buggy
+spatial_data_funs<-spatial_data_funs %>%
   mutate_if(is.factor, as.character)
 
 usethis::use_data(spatial_data_funs, overwrite=TRUE)
