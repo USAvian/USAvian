@@ -16,3 +16,4 @@ Habitat Joint Ventures,hjv,,,,,,,,advisory_region,usa,regional,,,,,,https://mbjv
 Migratory Bird Joint Ventures,mbjv,,,https://ecos.fws.gov/ServCat/DownloadFile/127388,,,,USFWS,advisory_region,usa,regional,,,,,,,,,,,https://ecos.fws.gov/ServCat/DownloadFile/125032
 Integrated Bird Monitoring in Bird Conservation,imbcr,A joint effort to conduct concurrent monitoring programs within BCRs,,,,,,USFWS,monitoring_efforts,usa,bcr,,,,,,,,,,,
 Avian Data Center ,adc,,,,,,,,monitoring_data,,,,,,,,,,,,,
+Integrated Taxonomic Information System,itis,Frequently updated taxonomic database serving as one of the major taxonomy standards. ,sqlite,https://www.itis.gov/downloads/itisSqlite.zip,,open,1,,taxonomy,global,NA,,,,,,itis.gov,,,,,

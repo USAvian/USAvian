@@ -1,6 +1,6 @@
 ---
-title: "USAvian Pilot Map"
-author: "Jessica Burnett"
+title: "USAvian pilot project"
+author: "Jessica L. Burnett"
 output:
   github_document:
     html_preview: true
@@ -11,7 +11,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE, eval = TRUE, warning=FALSE, message=FALSE)
 
 # install and load packages
-pkgs<- c( "ggplot2", "dplyr", "ggplot2", "magrittr", "here", "usmap", "sbtools", "devtools", "USAvian")
+pkgs<- c( "ggplot2", "dplyr", "ggplot2", "magrittr", "here", "usmap", "sbtools", "devtools", "USAvian", "ritis")
 new.packages <- pkgs[!(pkgs %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
 suppressMessages(lapply(pkgs, library, character.only = TRUE))
@@ -35,7 +35,7 @@ if(any(abbrevs %in% unique(data_sources$abbrev))==FALSE){ "some abbrevs do not a
 Next we can download the data. This function will **not** overwrite existing files with the same names. 
 ```{r download_data, include=FALSE}
 download_data(abbrevs=abbrevs, dir= here("data/data-raw")) # this will create a new directory if it does not already exist
-# zip_files <- unzip_data(abbrevs)
+zip_files <- unzip_data(abbrevs)
 ```
 Unzip the files associated with 'abbrevs'. For some reason this isn't working inside an RMD chunk, but works as expected here.....
 `r zip_files <- unzip_data(abbrevs)`
