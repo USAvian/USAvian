@@ -1,4 +1,4 @@
-# USAvian (under construction. well, really, we're  still drawing up the plans.)
+# USAvian (under construction. well, really, we're  still drawing up [the plans](https://app.thebrain.com/brains/16bef153-1e7b-4cdb-b5b5-5d057c1bc9bc/thoughts/42ac7514-07f2-424c-a7c6-4904e7b6ba93/notes).)
 [![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges)
 
 An interactive map for connecting and visualizing the bird conservation and management networks in the U.S.  A collection of collections. A list of lists. A map of maps. The one-stop shop for entities directly or indirectly doing bird conservation and management.
