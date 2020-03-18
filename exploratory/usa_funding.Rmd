@@ -1,0 +1,46 @@
+---
+title: "U.S. Federal Funding"
+author: "JBurnett"
+date: "3/13/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(include=FALSE)
+# install and load packages
+pkgs<- c("PostgreSQL", "here")
+new.packages <- pkgs[!(pkgs %in% installed.packages()[,"Package"])]
+if(length(new.packages)) install.packages(new.packages)
+suppressMessages(lapply(pkgs, library, character.only = TRUE))
+rm(new.packages,pkgs)
+```
+
+
+```{r dirs}
+ls()
+# untar(... .gz file(s))
+```
+## U.S. Federal Grants and Contracts
+We are interested in exploring federal funding distribution for bird-related products. The website, [USASpending](usaspending.gov), has a database dump located [here](https://files.usaspending.gov/database_download/). 
+
+The dumps comprise two compressed files: 
+
+.zip file | ~size (GB) | notes
+---|-----|----
+USAspending Database | 2 | ?Tbd?
+Subset Database | 
+
+```{r usaspending}
+
+
+
+```
+
+```{r }
+```
+```{r }
+```
+```{r }
+```
+```{r }
+```
