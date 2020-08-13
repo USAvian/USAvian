@@ -4,7 +4,8 @@ Leveraging knowledge, experience, data, and tools to decision making in the bird
 
 
 ## About
-This project was born from unsuccessful attempts at trying to build mental maps of what groups, cooperatives, federal agencies are "doing" or influencing bird conservation in the U.S. We are designing a database which will inform a visualization (map) of this complex network. 
+This project was born from unsuccessful attempts of trying to build mental maps of who, what, where, and how various organizations, research groups, working groups, and state and federal agencies are doing conservtion science or delivery. We are designing a database of sorts to inform an interactive info-scape and companion user interface for digitally mapping out the complex network that is bird conservation. 
+
 <img style="float: left;" src="/images/cdi_concept_img.png">
 
 ## Expected Benefits
@@ -14,7 +15,7 @@ __Networking__. Although most conservation groups are likely aware of those doin
 
 __Outreach__. Similar to its role in teaching, the tool may also help increase awareness outside the scientific communities of the conseravtion efforts in their immediate area, or with respect to taxa of interest. We also envision this map to as a resource to which communication professionals can refer when researching conservation news per region or species.
 
-## Iterative Design and Development 
+## Iterative Design and Development of the User Interface
 <img style="float: left;" src="/images/usability_concept.png">
 
 ## Desired Features
@@ -24,9 +25,11 @@ For updated lists of potential and acutal data sources, please visit Issues [2](
 If you'd like to help or voice your strongly-worded opinion publicly, please visit [Issue 1](https://github.com/TrashBirdEcology/USAvian/issues/1) or [email JLB](mailto:jessicaleighburnett@gmail.com). Contributors must follow the [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## Core Team
-- Jessica Burnett ([trashbirdecology](https://github.com/trashbirdecology))
-- Kevin Burgio ([krburgio](https://github.com/rburgio))
-- Auriel Fournier ([aurielfournier](https://github.com/aurielfournier))
+- Jessica Burnett ([GH:trashbirdecology](https://github.com/trashbirdecology))
+- Kevin Burgio ([GH:krburgio](https://github.com/rburgio))
+- Auriel Fournier ([GH:aurielfournier](https://github.com/aurielfournier))
+- Brian Wee ([GH:brianwee](https://github.com/brianwee))
+
 
 <!---
 ## Repository Structure
