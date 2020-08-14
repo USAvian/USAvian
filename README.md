@@ -6,6 +6,7 @@ Leveraging knowledge, experience, data, and tools to decision making in the bird
 ## About
 This project was born from unsuccessful attempts of trying to build mental maps of who, what, where, and how various organizations, research groups, working groups, and state and federal agencies are doing conservtion science or delivery. We are designing a database of sorts to inform an interactive info-scape and companion user interface for digitally mapping out the complex network that is bird conservation. 
 
+An example of the layers USAvian map can integrrate includes but is most definitely not limited to:
 <img style="float: left;" src="/images/cdi_concept_img.png">
 
 ## Expected Benefits
