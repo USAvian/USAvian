@@ -25,13 +25,6 @@ For updated lists of potential and acutal data sources, please visit Issues [2](
 ## Contributions
 If you'd like to help or voice your strongly-worded opinion publicly, please visit [Issue 1](https://github.com/TrashBirdEcology/USAvian/issues/1) or [email JLB](mailto:jessicaleighburnett@gmail.com). Contributors must follow the [Code of Conduct](CODE_OF_CONDUCT.md).
 
-## Core Team
-- Jessica Burnett ([GH:trashbirdecology](https://github.com/trashbirdecology))
-- Kevin Burgio ([GH:krburgio](https://github.com/rburgio))
-- Auriel Fournier ([GH:aurielfournier](https://github.com/aurielfournier))
-- Brian Wee ([GH:brianwee](https://github.com/brianwee))
-
-
 <!---
 ## Repository Structure
 ```
